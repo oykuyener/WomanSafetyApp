@@ -101,7 +101,10 @@
         android:layout_marginStart="52dp"
         android:layout_marginLeft="52dp"
         android:layout_marginBottom="116dp"
+        android:background="@drawable/roundedbutton"
         android:text="Kayıtlar"
+        app:backgroundTint="#C183B14F"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
