@@ -24,7 +24,7 @@ import com.google.android.material.tabs.TabLayout;
 public class FourthFragment extends Fragment {
 
     EditText et_name,et_surname,et_tc,et_address;
-    Button bt_register;
+    Button bt_register,bt_delete;
     FeedReaderDbHelper db;
     String name,surname,tc,address,ctname,ctsur,cttc,ctaddress,kontrol;
     int ctid;
@@ -81,10 +81,9 @@ public class FourthFragment extends Fragment {
         et_tc = (EditText) v.findViewById(R.id.et_tc);
         et_address = (EditText) v.findViewById(R.id.et_address);
         bt_register = (Button) v.findViewById(R.id.bt_register);
+        bt_delete = (Button) v.findViewById(R.id.bt_delete);
+
         Cursor cursor = db.viewData();
-
-
-
         if (cursor.moveToFirst()){
             do {
                 // Passing values
@@ -156,6 +155,18 @@ public class FourthFragment extends Fragment {
                 }
             }
         });
+
+        bt_delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                db.deleteAll();
+                et_name.setText(null);
+                et_surname.setText(null);
+                et_tc.setText(null);
+                et_address.setText(null);
+            }
+        });
+
         return v;
     }
 }

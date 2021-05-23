@@ -47,4 +47,9 @@ public class FeedReaderDbHelper extends SQLiteOpenHelper {
         long result = db.update("kullanici", cv,"ID=" + "1", null);
         return !(result == -1);
     }
+
+    public void deleteAll(){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("delete from kullanici");
+    }
 }
