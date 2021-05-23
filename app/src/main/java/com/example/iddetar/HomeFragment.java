@@ -165,7 +165,7 @@ public class HomeFragment extends Fragment {
                     Dialog dialog = new Dialog(getContext());
                     AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getContext());
                     alertDialogBuilder.setMessage(text);
-                    alertDialogBuilder.setNegativeButton("ok", new DialogInterface.OnClickListener(){
+                    alertDialogBuilder.setNegativeButton("tamam", new DialogInterface.OnClickListener(){
 
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
