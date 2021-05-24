@@ -164,6 +164,7 @@ public class FourthFragment extends Fragment {
                 et_surname.setText(null);
                 et_tc.setText(null);
                 et_address.setText(null);
+                ctid = 0;
             }
         });
 
